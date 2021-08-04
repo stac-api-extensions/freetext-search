@@ -1,0 +1,50 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "The SpatioTemporal Asset Catalog API - Free Text",
+    "description" : "Adds parameter to enable free-text searching on text properties.",
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version" : "0.1.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/cedadev/free-text/1.0.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  } ],
+  "paths" : { },
+  "components" : {
+    "schemas" : {
+      "searchBody" : {
+        "type" : "object",
+        "properties" : {
+          "q" : {
+            "$ref" : "#/components/schemas/q"
+          }
+        },
+        "description" : "**Optional Extension: ** Free Text\n\nFree-text queries against item properties."
+      },
+      "q" : {
+        "type" : "string",
+        "description" : "Search string",
+        "example" : "HadGem"
+      }
+    },
+    "parameters" : {
+      "q" : {
+        "name" : "q",
+        "in" : "query",
+        "description" : "**Optional Extension:** Free Text\n\nMake free-text queries against properties in items.\nUse the JSON form of the query used in POST.",
+        "required" : false,
+        "allowEmptyValue" : true,
+        "style" : "form",
+        "explode" : true,
+        "schema" : {
+          "type" : "string",
+          "example" : "HadGem3"
+        }
+      }
+    }
+  }
+}
