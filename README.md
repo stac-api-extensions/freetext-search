@@ -1,1 +1,0 @@
-# STAC Free Text Search
