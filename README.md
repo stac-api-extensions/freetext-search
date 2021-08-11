@@ -23,7 +23,10 @@ the ability to search for keywords across all properties with more complex queri
 | `/search?q=sentinel` | Free-text query against all properties | This will search for any matching items where `properties.*` CONTAINS `"sentinel"` |
 | `/search?q="climate model"` | Free-text search using exact | This will search for any matching items where `properties.*` CONTAINS the exact phrase `"climate model"` |
 |`/search?q=climate model`| Using `OR` term match (**Default**) | This will search for any matching items where `properties.*` CONTAINS `"climate"` OR `"model"`|
-|`/search?q=climate+model`| Using `AND` term match | This will search for any matching items where `properties.*` CONTAINS `"climate"` AND `"model"`|
+|`/search?q=climate OR model`| Using `OR` term match (**Default**) | This will search for any matching items where `properties.*` CONTAINS `"climate"` OR `"model"`|
+|`/search?q=climate AND model`| Using `AND` term match | This will search for any matching items where `properties.*` CONTAINS `"climate"` AND `"model"`|
+| `/search?q=(quick OR brown) AND fox` | Parentheses can be used to group terms | This will search for matching items where `properties.*` CONTAINS `"quick"` OR `"brown"` AND `"fox"` |
+| `/search?q=quick +brown -fox` | Indicate included and excluded terms using `+`/`-` | This will search for items where `properties.*` INCLUDES `"brown"` EXCLUDES `"fox"` OR CONTAINS `"quick"` |
 
 ## HTTP POST
 
