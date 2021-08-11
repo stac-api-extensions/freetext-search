@@ -21,7 +21,6 @@ the ability to search for keywords across all properties with more complex queri
 | URL Example | Summary | Detail |
 | ----------- | ------- | ------ |
 | `/search?q=sentinel` | Free-text query against all properties | This will search for any matching items where `properties.*` CONTAINS `"sentinel"` |
-| `/search?q=sat:orbit_state:ascending` | Free-text query against specific property | This will search for any matching items where `properties.sat:obit_state` CONTAINS `"ascending"` |
 | `/search?q="climate model"` | Free-text search using exact | This will search for any matching items where `properties.*` CONTAINS the exact phrase `"climate model"` |
 |`/search?q=climate model`| Using `OR` term match (**Default**) | This will search for any matching items where `properties.*` CONTAINS `"climate"` OR `"model"`|
 |`/search?q=climate+model`| Using `AND` term match | This will search for any matching items where `properties.*` CONTAINS `"climate"` AND `"model"`|
