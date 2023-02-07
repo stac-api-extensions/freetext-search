@@ -1,9 +1,14 @@
-|   |   |
-|---|---|
-| **OpenAPI Specification** | [openapi.yaml](openapi.yaml) |
-| **Conformance Class** | https://api.stacspec.org/v1.0.0-beta.2/item-search#free-text-search |
-| **[Maturity Classification](https://github.com/radiantearth/stac-api-spec/blob/master/extensions.md#extension-maturity)** | Pilot |
-| **Dependents** | - Item Search |
+# STAC API - Free-Text Search Extension Specification
+
+- **Title:** Free-Text Search Extension Specification
+- **OpenAPI specification:** [openapi.yaml](openapi.yaml)
+- **Conformance Classes:**
+  - <https://api.stacspec.org/v1.0.0-beta.2/item-search#free-text-search>
+- **Scope:** STAC API - Core
+- **[Extension Maturity Classification](https://github.com/radiantearth/stac-api-spec/tree/main/README.md#maturity-classification):** Proposal
+- **Dependencies:**
+  - [STAC API - Core](https://github.com/radiantearth/stac-api-spec/tree/v1.0.0-rc.2/core)
+- **Owner**: @agstephens
   
 This defines a new parameter, `q` that allows the user to perform free-text queries against the item properties. 
 The value of the parameter is a string and is passed to the underlying backend for free-text searches.
