@@ -1,6 +1,6 @@
-# STAC API - Free-Text Search Extension Specification
+# STAC API - Free-Text Search
 
-- **Title:** Free-Text Search Extension Specification
+- **Title:** Free-Text Search
 - **OpenAPI specification:** [openapi.yaml](openapi.yaml)
 - **Conformance Classes:**
   - <https://api.stacspec.org/v1.0.0-beta.2/item-search#free-text-search>
