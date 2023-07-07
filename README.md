@@ -19,7 +19,12 @@
   
 This defines a new parameter, `q` that allows the user to perform free-text queries against STAC metadata. 
 The value of the parameter is a string and is passed to the underlying backend for free-text searches.
-The specific set of text fields to which the parameter is applied is left to the discretion of the implementation, but a recommendation is to at least consider `title`, `description` and `keywords`. It is also allowed to query against all text fields.
+The specific set of text fields to which the parameter is applied is left to the discretion of the implementation,
+but a recommendation is to at least consider:
+- Collections: `title`, `description` and `keywords`
+- Catalog: `title`, `description`
+- Item: all relevant textual properties
+It is also allowed to query against all text fields.
 
 This extension sits somewhere between the basic API and the [Filter Extension](https://github.com/radiantearth/stac-api-spec/tree/master/fragments/filter) providing
 more powerful query features than the raw API but without the flexibility and increased operators of the filter plugin. This should mostly be used to provide
@@ -63,13 +68,13 @@ Any of the search terms must be present in the set of text fields (OR operaror).
 
 | URL Example | Summary | Detail |
 | ----------- | ------- | ------ |
-| `/search?q=sentinel` | Free-text query against all properties | This will search for any matching items where `properties.*` CONTAINS `"sentinel"` |
-| `/search?q="climate model"` | Free-text search using exact | This will search for any matching items where `properties.*` CONTAINS the exact phrase `"climate model"` |
-|`/search?q=climate model`| Using `OR` term match (**Default**) | This will search for any matching items where `properties.*` CONTAINS `"climate"` OR `"model"`|
-|`/search?q=climate OR model`| Using `OR` term match (**Default**) | This will search for any matching items where `properties.*` CONTAINS `"climate"` OR `"model"`|
-|`/search?q=climate AND model`| Using `AND` term match | This will search for any matching items where `properties.*` CONTAINS `"climate"` AND `"model"`|
-| `/search?q=(quick OR brown) AND fox` | Parentheses can be used to group terms | This will search for matching items where `properties.*` CONTAINS `"quick"` OR `"brown"` AND `"fox"` |
-| `/search?q=quick +brown -fox` | Indicate included and excluded terms using `+`/`-` | This will search for items where `properties.*` INCLUDES `"brown"` EXCLUDES `"fox"` OR CONTAINS `"quick"` |
+| `/search?q=sentinel` | Free-text query against all properties | This will search for any matching items that CONTAIN `"sentinel"` |
+| `/search?q="climate model"` | Free-text search using exact | This will search for any matching items that CONTAIN the exact phrase `"climate model"` |
+|`/search?q=climate model`| Using `OR` term match (**Default**) | This will search for any matching items that CONTAIN `"climate"` OR `"model"`|
+|`/search?q=climate OR model`| Using `OR` term match (**Default**) | This will search for any matching items that CONTAIN `"climate"` OR `"model"`|
+|`/search?q=climate AND model`| Using `AND` term match | This will search for any matching items that CONTAIN `"climate"` AND `"model"`|
+| `/search?q=(quick OR brown) AND fox` | Parentheses can be used to group terms | This will search for matching items that CONTAIN `"quick"` OR `"brown"` AND `"fox"` |
+| `/search?q=quick +brown -fox` | Indicate included and excluded terms using `+`/`-` | This will search for items that INCLUDES `"brown"` EXCLUDES `"fox"` OR CONTAIN `"quick"` |
 
 ### HTTP POST
 
