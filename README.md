@@ -9,7 +9,10 @@
   - <https://api.stacspec.org/v1.0.0-rc.1/collection-search#advanced-free-text>
   - <https://api.stacspec.org/v1.0.0-rc.1/ogcapi-features#free-text>
   - <https://api.stacspec.org/v1.0.0-rc.1/ogcapi-features#advanced-free-text>
-- **Scope:** STAC API - Core
+- **Scope:**
+  - STAC API - Collection Search
+  - STAC API - Item Search
+  - STAC API - Features
 - **[Extension Maturity Classification](https://github.com/radiantearth/stac-api-spec/tree/main/README.md#maturity-classification):** Proposal
 - **Dependencies:** (any of)
   - [STAC API - Collection Search](https://github.com/stac-api-extensions/collection-search)
