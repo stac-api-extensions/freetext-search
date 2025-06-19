@@ -34,7 +34,7 @@ more powerful query features than the raw API but without the flexibility and in
 the ability to search for keywords across all properties with more complex queries and faceted search being provided by the filter extension.
 
 This extension defines two flavors of free text search. 
-A simple one that is aligned with [OGC API - Records](https://docs.ogc.org/DRAFTS/20-004.html#_parameter_q) and 
+A simple one that is aligned with [OGC API - Records](https://docs.ogc.org/is/20-004r1/20-004r1.html#core-query-parameters-q) and 
 a more advanced one.
 Both variants can be implemented against any of the search endpoints (Collection Search, Item Search, Features).
 
