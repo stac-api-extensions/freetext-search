@@ -48,7 +48,7 @@ Both variants can be implemented against any of the search endpoints (Collection
   - Features (item search per collection): <https://api.stacspec.org/v1.0.0-rc.1/ogcapi-features#free-text>
 
 The basic free-text search adds a `q` query parameter to the request URI.
-See <https://docs.ogc.org/DRAFTS/20-004.html#_parameter_q> for details.
+See <https://docs.ogc.org/is/20-004r1/20-004r1.html#core-query-parameters-q> for details.
 
 The search works case-insensitive and spaces have no special meaning.
 Any of the search terms must be present in the set of text fields (OR operaror).
