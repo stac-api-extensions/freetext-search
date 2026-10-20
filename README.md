@@ -50,10 +50,12 @@ Both variants can be implemented against any of the search endpoints (Collection
 The basic free-text search adds a `q` query parameter to the request URI.
 See <https://docs.ogc.org/is/20-004r1/20-004r1.html#core-query-parameters-q> for details.
 
-The search works case-insensitive and spaces have no special meaning.
-Any of the search terms must be present in the set of text fields (OR operaror).
+The search works case-insensitive.
+Any of the search terms must be present in the set of text fields (OR operator).
+A search term that consists of multiple words separated by white space is a phrase,
+i.e. the words must appear in the order specified and separated only by white space.
 
-- In HTTP `GET` requests, all search terms must be separated by a comma. For example, if you want to search for "Earth Observation" or "EO", your query parameter should be as follows: `q=EO,Earth Observation`.
+- In HTTP `GET` requests, all search terms must be separated by a comma. For example, if you want to search for "EO" or the phrase "Earth Observation", your query parameter should be as follows: `q=EO,Earth Observation`.
 - In HTTP `POST` requests, an array of search terms must be provided, for example: `{"q": ["EO", "Earth Observation"]}`.
 
 ## Advanced
